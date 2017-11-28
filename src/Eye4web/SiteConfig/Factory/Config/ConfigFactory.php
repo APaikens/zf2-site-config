@@ -44,7 +44,7 @@ class ConfigFactory implements FactoryInterface
     
     public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null) {
         /* @var ModuleOptions $config */
-        $options = $serviceLocator->get(ModuleOptions::class);
+        $options = $container->get(ModuleOptions::class);
 
         $data = null;
 
@@ -57,7 +57,7 @@ class ConfigFactory implements FactoryInterface
                 $data = $configFactory::fromFile($configFiles);
             }
         } else {
-            $reader = $serviceLocator->get($options->getReaderClass());
+            $reader = $container->get($options->getReaderClass());
             if ($reader instanceof ReaderInterface) {
                 $data = $reader->getArray();
             } else {
