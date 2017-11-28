@@ -34,7 +34,11 @@ class ModuleOptionsFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $config = $serviceLocator->get('Config');
+        return $this->__invoke($serviceLocator);
+    }
+
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null) {
+        $config = $container->get('Config');
         $moduleConfig = [];
         if (isset($config['eye4web']['site-config'])) {
             $moduleConfig = $config['eye4web']['site-config'];
