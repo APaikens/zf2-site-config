@@ -39,6 +39,10 @@ class ConfigFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
+        return $this->__invoke($serviceLocator);
+    }
+    
+    public function __invoke(\Interop\Container\ContainerInterface $container, $requestedName, array $options = null) {
         /* @var ModuleOptions $config */
         $options = $serviceLocator->get(ModuleOptions::class);
 
