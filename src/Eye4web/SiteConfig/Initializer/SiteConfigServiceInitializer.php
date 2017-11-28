@@ -36,4 +36,7 @@ class SiteConfigServiceInitializer implements InitializerInterface
             $instance->setSiteConfigService($siteConfigService);
         }
     }
+    public function __invoke(\Interop\Container\ContainerInterface $container, $instance) {
+        //simply do nothing yet
+    }
 }
