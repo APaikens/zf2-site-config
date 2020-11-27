@@ -20,7 +20,7 @@
 namespace Eye4web\SiteConfig\View\Helper;
 
 use Eye4web\SiteConfig\Service\SiteConfigService;
-use Zend\View\Helper\AbstractHelper;
+use Laminas\View\Helper\AbstractHelper;
 
 class SiteConfigHelper extends AbstractHelper
 {

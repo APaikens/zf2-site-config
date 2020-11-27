@@ -20,7 +20,7 @@
 namespace Eye4web\SiteConfig\Controller\Plugin;
 
 use Eye4web\SiteConfig\Service\SiteConfigService;
-use Zend\Mvc\Controller\Plugin\AbstractPlugin;
+use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
 
 class SiteConfigPlugin extends AbstractPlugin
 {

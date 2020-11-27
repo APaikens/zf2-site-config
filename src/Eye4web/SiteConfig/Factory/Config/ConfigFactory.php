@@ -22,9 +22,9 @@ namespace Eye4web\SiteConfig\Factory\Config;
 use Eye4web\SiteConfig\Config\Config;
 use Eye4web\SiteConfig\Options\ModuleOptions;
 use Eye4web\SiteConfig\Reader\ReaderInterface;
-use Zend\Config\Factory;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\Config\Factory;
+use Laminas\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class ConfigFactory implements FactoryInterface
 {

@@ -19,8 +19,8 @@
 
 namespace Eye4web\SiteConfig\Config;
 
-use Zend\Config\Config as ZendConfig;
+use Laminas\Config\Config as LaminasConfig;
 
-class Config extends ZendConfig implements ConfigInterface
+class Config extends LaminasConfig implements ConfigInterface
 {
 }

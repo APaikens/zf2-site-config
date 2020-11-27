@@ -19,7 +19,7 @@
 
 namespace Eye4web\SiteConfig\Options;
 
-use Zend\Stdlib\AbstractOptions;
+use Laminas\Stdlib\AbstractOptions;
 
 class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
 {
@@ -32,7 +32,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
 
     /**
      * If a config file is set, the 'readerClass' config below is ignored.
-     * The reader class will instead be pulled from \Zend\Config\Factory.
+     * The reader class will instead be pulled from \Laminas\Config\Factory.
      * See the docs folder for information on how to add your own reader.
      *
      * You can specify single file or an array of files
@@ -44,7 +44,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      *  You can use any class implementing either of the two interfaces:
      * \Eye4web\SiteConfig\Reader\ReaderInterface
-     * \Zend\Config\Read\ReaderInterface.
+     * \Laminas\Config\Read\ReaderInterface.
      *
      * @var null|string|array
      */

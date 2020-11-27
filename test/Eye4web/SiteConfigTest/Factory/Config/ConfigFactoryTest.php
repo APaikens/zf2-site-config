@@ -23,8 +23,8 @@ use Eye4web\SiteConfig\Config\Config;
 use Eye4web\SiteConfig\Factory\Config\ConfigFactory;
 use Eye4web\SiteConfig\Options\ModuleOptions;
 use Eye4web\SiteConfig\Reader\ReaderInterface;
-use Zend\Config\Factory as ZendConfigFactory;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\Config\Factory as LaminasConfigFactory;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class ConfigFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -38,7 +38,7 @@ class ConfigFactoryTest extends \PHPUnit_Framework_TestCase
             ->getMock();
         $configFile = 'someConfigFile.ext';
         $expectedResult = ['array' => 'of', 'config' => 'values'];
-        $zendConfigFactory = new ZendConfigFactoryFake($expectedResult);
+        $zendConfigFactory = new LaminasConfigFactoryFake($expectedResult);
 
         $serviceLocator->expects($this->at(0))
             ->method('get')
@@ -66,7 +66,7 @@ class ConfigFactoryTest extends \PHPUnit_Framework_TestCase
             ->getMock();
         $configFile = null;
         $expectedResult = ['array' => 'of', 'config' => 'values'];
-        $zendConfigFactory = new ZendConfigFactoryFake($expectedResult);
+        $zendConfigFactory = new LaminasConfigFactoryFake($expectedResult);
         $readerClass = 'Some\Reader\Class';
         $reader = $this->getMockBuilder(ReaderInterface::class)
             ->disableOriginalConstructor()
@@ -107,9 +107,9 @@ class ConfigFactoryTest extends \PHPUnit_Framework_TestCase
             ->getMock();
         $configFile = null;
         $expectedResult = ['array' => 'of', 'config' => 'values'];
-        $zendConfigFactory = new ZendConfigFactoryFake($expectedResult);
+        $zendConfigFactory = new LaminasConfigFactoryFake($expectedResult);
         $readerClass = 'Wrong\Reader\Class';
-        $notAReader = $this->getMockBuilder(ZendConfigFactoryFake::class)
+        $notAReader = $this->getMockBuilder(LaminasConfigFactoryFake::class)
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -144,7 +144,7 @@ class ConfigFactoryTest extends \PHPUnit_Framework_TestCase
             ->getMock();
         $configFile = null;
         $expectedResult = null;
-        $zendConfigFactory = new ZendConfigFactoryFake($expectedResult);
+        $zendConfigFactory = new LaminasConfigFactoryFake($expectedResult);
         $readerClass = 'Some\Reader\Class';
         $reader = $this->getMockBuilder(ReaderInterface::class)
             ->disableOriginalConstructor()
@@ -180,12 +180,12 @@ class ConfigFactoryTest extends \PHPUnit_Framework_TestCase
         $factory = new ConfigFactory();
         $result = $factory->getConfigFactory();
 
-        $this->assertInstanceOf(ZendConfigFactory::class, $result);
+        $this->assertInstanceOf(LaminasConfigFactory::class, $result);
     }
 
     public function testSetConfigFactory()
     {
-        $zendFactory = new ZendConfigFactory();
+        $zendFactory = new LaminasConfigFactory();
         $factory = new ConfigFactory();
         $factory->setConfigFactory($zendFactory);
         $result = $factory->getConfigFactory();

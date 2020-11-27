@@ -19,7 +19,7 @@
 
 namespace Eye4web\SiteConfigTest\Factory\Config;
 
-class ZendConfigFactoryFake extends \Zend\Config\Factory
+class LaminasConfigFactoryFake extends \Laminas\Config\Factory
 {
     public static $returnValue;
 

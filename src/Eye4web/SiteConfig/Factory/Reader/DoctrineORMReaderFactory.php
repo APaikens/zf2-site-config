@@ -22,8 +22,8 @@ namespace Eye4web\SiteConfig\Factory\Reader;
 use Doctrine\ORM\EntityManager;
 use Eye4web\SiteConfig\Options\ModuleOptions;
 use Eye4web\SiteConfig\Reader\DoctrineORMReader;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class DoctrineORMReaderFactory implements FactoryInterface
 {

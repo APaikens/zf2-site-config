@@ -16,7 +16,7 @@
  * This software consists of voluntary contributions made by many individuals
  * and is licensed under the MIT license.
  */
-use Zend\ServiceManager\Proxy\LazyServiceFactory;
+use Laminas\ServiceManager\Proxy\LazyServiceFactory;
 return [
     'service_manager' => [
         'factories' => [

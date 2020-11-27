@@ -27,12 +27,12 @@ return [
             /**
              * You can use any class implementing either of the two interfaces:
              * \Eye4web\SiteConfig\Reader\ReaderInterface
-             * \Zend\Config\Read\ReaderInterface
+             * \Laminas\Config\Read\ReaderInterface
              */
             'readerClass' => 'Eye4web\SiteConfig\Reader\DoctrineORMReader',
 
             /**
-             * If you use a reader implementing Zend\Config\Reader\ReaderInterface class,
+             * If you use a reader implementing Laminas\Config\Reader\ReaderInterface class,
              * you must specify the file path here
              */
             'configFile' => null,

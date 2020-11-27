@@ -20,8 +20,8 @@
 namespace Eye4web\SiteConfig\Factory\Options;
 
 use Eye4web\SiteConfig\Options\ModuleOptions;
-use Zend\ServiceManager\FactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\FactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class ModuleOptionsFactory implements FactoryInterface
 {
