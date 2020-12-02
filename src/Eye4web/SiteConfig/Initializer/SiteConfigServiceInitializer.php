@@ -21,13 +21,13 @@ namespace Eye4web\SiteConfig\Initializer;
 
 use Eye4web\SiteConfig\Service\SiteConfigAwareInterface;
 use Eye4web\SiteConfig\Service\SiteConfigService;
-use Zend\ServiceManager\InitializerInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\ServiceManager\InitializerInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 class SiteConfigServiceInitializer implements InitializerInterface
 {
     /**
-     * @see \Zend\ServiceManager\InitializerInterface::initialize()
+     * @see \Laminas\ServiceManager\InitializerInterface::initialize()
      */
     public function initialize($instance, ServiceLocatorInterface $serviceLocator)
     {

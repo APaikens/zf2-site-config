@@ -11,7 +11,7 @@ This modules allows you to easily get site config in all of your files.
 The module can, out-of-the-box, read config values from the following:
 
 * DoctrineORM
-* Files(supported by `\Zend\Config\Reader`)
+* Files(supported by `\Laminas\Config\Reader`)
     * ini
     * json
     * xml
@@ -85,7 +85,7 @@ This reader reads config values from your database. This module is setup to use 
 2. Add your config values to the database. You only have to fill `key` and `value`, the rest of the fields are just convenience fields
 
 #### Files
-This module uses `Zend\Config` to read config from files. It can read config from the following file types:
+This module uses `Laminas\Config` to read config from files. It can read config from the following file types:
 * ini
 * json
 * xml

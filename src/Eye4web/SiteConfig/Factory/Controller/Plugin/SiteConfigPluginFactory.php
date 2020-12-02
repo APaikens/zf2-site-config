@@ -22,10 +22,10 @@ namespace Eye4web\SiteConfig\Factory\Controller\Plugin;
 use Eye4web\SiteConfig\Controller\Plugin\SiteConfigPlugin;
 use Eye4web\SiteConfig\Service\SiteConfigService;
 use Interop\Container\ContainerInterface;
-use Zend\Mvc\Controller\PluginManager;
-use Zend\ServiceManager\Factory\FactoryInterface;
-use Zend\ServiceManager\FactoryInterface as LegacyFactoryInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
+use Laminas\Mvc\Controller\PluginManager;
+use Laminas\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\FactoryInterface as LegacyFactoryInterface;
+use Laminas\ServiceManager\ServiceLocatorInterface;
 
 if (!\interface_exists(FactoryInterface::class)) {
     \class_alias(LegacyFactoryInterface::class, FactoryInterface::class);

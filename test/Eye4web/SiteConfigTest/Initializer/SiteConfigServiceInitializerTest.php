@@ -28,7 +28,7 @@ class SiteConfigServiceInitializerTest extends \PHPUnit_Framework_TestCase
         $serviceClassName     = 'Eye4web\SiteConfig\Service\SiteConfigService';
         $initializer          = new SiteConfigServiceInitializer();
         $instance             = new SiteConfigServiceAwareFake();
-        $serviceLocator       = $this->getMock('Zend\ServiceManager\ServiceLocatorInterface');
+        $serviceLocator       = $this->getMock('Laminas\ServiceManager\ServiceLocatorInterface');
         $siteConfigService    = $this->getMock($serviceClassName, [], [], '', false);
 
         $serviceLocator->expects($this->once())
